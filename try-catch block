@@ -1,0 +1,44 @@
+try {
+    console.log(a+b)
+} catch (error) {
+    console.log("the error is saved") 
+    //i have not console.log the error from the try block,thus the errr is not logged into the output
+}
+console.log("code still running")
+
+
+try {
+    console.log(a+b)
+} catch (err) {
+    console.log(err)
+    console.log("the error is saved") 
+    //now i have logged the error from try block to the catch block thus the error will be output.
+}
+console.log("code still running")
+
+
+try {
+    throw new error();
+    //an error is thrown in the try block an will be catched
+} 
+throw new error();
+catch (err) {
+    console.log(err)
+    console.log("the error is catched") 
+    
+}
+console.log("code still running")
+
+
+try {
+    throw new error();
+    //an error is thrown in the try block an will be catched
+} 
+throw new error(); //throwing error outside try-catch blocck will not be catched
+catch (err) {
+    console.log(err)
+    console.log("the error is catched") 
+    
+}
+console.log("code still running")
+
